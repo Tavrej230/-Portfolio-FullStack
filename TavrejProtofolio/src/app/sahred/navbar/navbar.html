@@ -1,0 +1,26 @@
+<nav class="navbar">
+
+  <!-- Logo with dropdown -->
+  <div class="logo-wrapper">
+    <div class="logo-circle" (click)="toggleProfile()">
+      TA
+    </div>
+
+    <div class="profile-card" *ngIf="showProfile">
+      <h3>Tavrej Ansari</h3>
+      <p><i class="fas fa-envelope"></i> tavrejansariansari4@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91 8528543215</p>
+    </div>
+  </div>
+
+  <ul class="nav-links">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
+    <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+    <li><a routerLink="/education" routerLinkActive="active">Education</a></li>
+    <li><a routerLink="/certificates" routerLinkActive="active">Certificates</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+  </ul>
+
+</nav>
