@@ -1,0 +1,244 @@
+.hero {
+    width: 90%;
+    max-width: 1200px;
+    margin: 130px auto 40px auto;
+    padding: 50px;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    min-height: 80vh;
+
+    background: rgba(3, 15, 35, .92);
+    border: 1px solid rgba(59, 130, 246, .25);
+
+    box-shadow:
+        0 0 25px rgba(59, 130, 246, .20),
+        0 0 80px rgba(59, 130, 246, .12),
+        0 25px 60px rgba(0, 0, 0, .60);
+
+    backdrop-filter: blur(12px);
+}
+
+/* ================= LEFT IMAGE ================= */
+
+.left-image {
+    flex: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-image img {
+    width: 100%;
+    max-width: 350px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 24px;
+    border: 2px solid rgba(0, 183, 255, .30);
+    box-shadow: 0 0 25px rgba(0, 183, 255, .25), 0 0 60px rgba(0, 183, 255, .18);
+    background: #07111f;
+}
+
+/* ================= RIGHT CONTENT ================= */
+
+.right-content {
+    flex: 1.3;
+}
+
+/* NAME */
+
+.name {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0 0 8px;
+    white-space: nowrap;
+}
+
+/* ROLE / TITLE */
+
+h2 {
+    color: #00b7ff !important;
+    margin: 0 0 16px 0;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 0 12px rgba(0, 183, 255, .45);
+}
+
+/* DESCRIPTION */
+
+.desc {
+    color: #b8c5d6;
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* ================= INFO CARDS GRID ================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.info-card {
+    background: rgba(15, 28, 54, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 12px 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-label {
+    font-size: 13px;
+    color: #00b7ff;
+    font-weight: 600;
+}
+
+.info-value {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* ================= BUTTONS ================= */
+
+.buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 26px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+
+.primary {
+    background: #00b7ff;
+    color: #001018;
+    box-shadow: 0 0 20px rgba(0, 183, 255, .45);
+}
+
+.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 183, 255, .65);
+}
+
+.outline {
+    border: 2px solid #00b7ff;
+    color: #00b7ff;
+    background: transparent;
+}
+
+.outline:hover {
+    background: #00b7ff;
+    color: #001018;
+}
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-icons {
+    display: flex;
+    gap: 14px;
+}
+
+.social {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-size: 18px;
+
+    color: #00b7ff;
+    border: 2px solid rgba(0, 183, 255, .45);
+    background: rgba(0, 183, 255, .05);
+
+    transition: all .3s ease;
+    box-shadow: 0 0 15px rgba(0, 183, 255, .15);
+}
+
+.social:hover {
+    transform: translateY(-4px) scale(1.08);
+    background: #00b7ff;
+    color: #001018;
+    box-shadow:
+        0 0 20px rgba(0, 183, 255, .60),
+        0 0 40px rgba(0, 183, 255, .35);
+}
+
+.github:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+.linkedin:hover {
+    background: #0a66c2;
+    color: #ffffff;
+    border-color: #0a66c2;
+}
+
+.instagram:hover {
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+    color: #ffffff;
+    border-color: #ee2a7b;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 100px;
+    }
+
+    .left-image img {
+        max-width: 260px;
+        height: 340px;
+    }
+
+    .name {
+        font-size: 30px;
+        white-space: nowrap;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}

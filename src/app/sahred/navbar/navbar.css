@@ -1,0 +1,164 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: #0f172a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* ===== LOGO WRAPPER ===== */
+.logo-wrapper {
+  position: relative;
+}
+
+/* ===== CIRCLE LOGO ===== */
+.logo-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  cursor: pointer;
+  transition: .3s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, .35);
+}
+
+.logo-circle:hover {
+  transform: scale(1.08);
+}
+
+/* ===== PROFILE DROPDOWN ===== */
+.profile-card {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 270px;
+  padding: 18px;
+  background: rgba(15, 23, 42, .95);
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 18px;
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .45);
+  backdrop-filter: blur(12px);
+  animation: fadeIn .25s ease;
+}
+
+.profile-card h3 {
+  margin: 0 0 14px;
+  color: #60a5fa;
+  font-size: 20px;
+}
+
+.profile-card p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  position: relative;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #3b82f6;
+  transition: width .3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #3b82f6;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .profile-card {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .logo-circle {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .profile-card {
+    width: 240px;
+    padding: 16px;
+  }
+}
