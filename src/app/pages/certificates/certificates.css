@@ -1,0 +1,271 @@
+.certificates-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 50px;
+    border-radius: 30px;
+    background: rgba(3, 15, 35, .92);
+    border: 1px solid rgba(59, 130, 246, .25);
+    box-shadow: 0 0 25px rgba(59, 130, 246, .20), 0 0 80px rgba(59, 130, 246, .12), 0 25px 60px rgba(0, 0, 0, .60);
+    backdrop-filter: blur(12px);
+}
+
+.certificates-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.cert-card {
+    background: rgba(15, 28, 54, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Beech wale card ko highlight karne ke liye */
+.active-cert {
+    border-color: rgba(0, 183, 255, 0.5);
+    box-shadow: 0 0 25px rgba(0, 183, 255, 0.2);
+    background: rgba(15, 32, 65, 0.8);
+}
+
+.cert-card:hover {
+    border-color: rgba(0, 183, 255, 0.6);
+    box-shadow: 0 0 25px rgba(0, 183, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+/* Icon Wrapper */
+.cert-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(0, 183, 255, 0.2), rgba(15, 28, 54, 0.8));
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-icon-wrapper {
+    transform: scale(1.1);
+}
+
+.cert-icon-wrapper i {
+    font-size: 28px;
+    color: #00b7ff;
+    filter: drop-shadow(0 0 10px rgba(0, 183, 255, 0.4));
+}
+
+/* Content Area */
+.cert-content h3 {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.cert-content p {
+    color: #94a3b8;
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .certificates-section {
+        padding: 30px 15px;
+        margin: 40px auto;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Certificates Header Fix */
+.certificates-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.certificates-header .sub-heading {
+    display: inline-block;
+    color: #00b7ff;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.certificates-header .section-title {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(0, 183, 255, 0.25);
+}
+
+.certificates-header .section-subtitle {
+    color: #94a3b8;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* Section Header Highlighting Fix */
+.projects-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projects-header .sub-heading {
+    display: inline-block;
+    color: #00b7ff; /* Neon blue highlight */
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.projects-header .section-title {
+    color: #ffffff; /* Pure white color taaki clear dikhe */
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(0, 183, 255, 0.25); /* Halka glow effect */
+}
+
+.projects-header .section-subtitle {
+    color: #94a3b8; /* Light slate gray */
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+}
+
+.profile-card {
+    width: 650px;
+    /* bada card */
+    min-height: 380px;
+    padding: 40px 35px;
+    background: rgba(10, 20, 45, .95);
+    border: 1px solid rgba(59, 130, 246, .25);
+    border-radius: 32px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
+    backdrop-filter: blur(12px);
+    transition: .35s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(37, 99, 235, .35);
+}
+
+.profile-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3b82f6;
+    box-shadow: 0 0 30px rgba(59, 130, 246, .55);
+    margin-bottom: 22px;
+}
+
+.profile-name {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 12px 0 10px;
+}
+
+.profile-text {
+    font-size: 22px;
+    color: #cbd5e1;
+    margin-bottom: 14px;
+}
+
+.profile-tech {
+    font-size: 20px;
+    color: #60a5fa;
+    margin-bottom: 32px;
+    letter-spacing: .5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.social-icons a {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, .08);
+    color: #fff;
+    font-size: 26px;
+    transition: .3s ease;
+}
+
+.social-icons a:hover {
+    background: #3b82f6;
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, .45);
+}
+
+/* mobile */
+@media(max-width:768px) {
+    .profile-card {
+        width: 100%;
+        max-width: 650px;
+        padding: 32px 22px;
+    }
+
+    .profile-name {
+        font-size: 32px;
+    }
+
+    .profile-text {
+        font-size: 18px;
+    }
+
+    .profile-tech {
+        font-size: 16px;
+    }
+}
